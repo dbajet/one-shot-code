@@ -1,6 +1,8 @@
 import time
 from typing import Dict, List
 
+# Find the unique items of a list of sorted items... better than O(n)
+
 items = [1] * 107890 + [2] * 15880 + [3] * 127413 + [4] * 1012345 + [5] * 99988 + [6] * 99988 + [7] * 99988 + [9] * 99988
 
 
@@ -32,6 +34,7 @@ class DistinctCount:
 
 
 def count_unique(items: List) -> int:
+    # the O(n) approach
     count = 1 if items else 0
     last = items[0] if items else None
     for i in items:
